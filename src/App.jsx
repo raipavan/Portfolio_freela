@@ -11,6 +11,8 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CustomCursor from './components/CustomCursor';
+import TechMarquee from './components/TechMarquee';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -57,13 +59,13 @@ function App() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
+          entry.target.classList.add('reveal');
           observer.unobserve(entry.target); 
         }
       });
     }, { threshold: 0.1 });
 
-    const hiddenElements = document.querySelectorAll('section, .glass-card, .timeline-item');
+    const hiddenElements = document.querySelectorAll('section, .glass-card, .timeline-item, .section-title, .stagger-container');
     hiddenElements.forEach(el => observer.observe(el));
 
     return () => observer.disconnect();
@@ -71,6 +73,7 @@ function App() {
 
   return (
     <>
+      <CustomCursor />
       {showIntro && <IntroLoader onComplete={() => setShowIntro(false)} />}
       <div className="scroll-progress-container">
         <div className="scroll-progress-bar" style={{ width: scrollProgress }}></div>
@@ -81,13 +84,30 @@ function App() {
         <div className="shape shape-2"></div>
         <div className="shape shape-3"></div>
       </div>
+      <div className="mesh-gradient"></div>
       <div className="bg-animation"></div>
+      
+      <div className="particles">
+        {[...Array(20)].map((_, i) => (
+          <div 
+            key={i} 
+            className="particle" 
+            style={{ 
+              left: `${Math.random() * 100}%`, 
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 20}s`,
+              transform: `scale(${Math.random() * 1.5})`
+            }}
+          ></div>
+        ))}
+      </div>
       
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <main>
         <Hero />
         <About />
+        <TechMarquee />
         <Skills />
         <Experience />
         <Projects />

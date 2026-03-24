@@ -7,7 +7,7 @@ const Skills = () => {
         <h2 className="section-title">My Skills</h2>
         <p className="section-subtitle">Technologies I work with to bring concepts to reality.</p>
         
-        <div className="skills-grid">
+        <div className="skills-grid stagger-container">
           <div className="glass-card fade-in">
             <h3>💻 Frontend</h3>
             <p>React.js, HTML5, Vanilla CSS, Tailwind, JavaScript (ES6+), Framer Motion, Responsive Design.</p>
@@ -21,6 +21,10 @@ const Skills = () => {
             <p>MongoDB, PostgreSQL, Mongoose, Data Modeling, Query Optimization.</p>
           </div>
           <div className="glass-card fade-in delay-3">
+            <h3>📊 Data Science & ML</h3>
+            <p>Python, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, SQL, Data Visualization, Statistical Modeling.</p>
+          </div>
+          <div className="glass-card fade-in delay-4">
             <h3>🛠️ Tools</h3>
             <p>Git, GitHub, VS Code, Postman, Vite, Vercel, Figma.</p>
           </div>

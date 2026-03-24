@@ -4,7 +4,7 @@ const Navbar = ({ theme, toggleTheme }) => {
   return (
     <nav>
       <div className="container">
-        <a href="#" className="logo">Deeksha<span>.</span></a>
+        <a href="#home" className="brand">Pavan rai<span>.</span></a>
         <div className="nav-actions">
           <div className="links" style={{ display: 'flex', gap: '2rem' }}>
             <a href="#about">About</a>

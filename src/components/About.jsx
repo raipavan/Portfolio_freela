@@ -9,10 +9,10 @@ const About = () => {
         
         <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '1.2rem', marginBottom: '1.5rem', color: 'var(--text-primary)' }}>
-            As a recent graduate stepping into the world of full stack development, I am incredibly passionate about bringing ideas to life through code.
+            As a Software Engineer currently working at <strong>CIEL-Hfactor</strong>, I bridge the gap between robust Full Stack Development and the analytical world of Data Science & Machine Learning.
           </p>
           <p style={{ fontSize: '1.1rem' }}>
-            I specialize in modern JavaScript frameworks, creating responsive, animated user interfaces on the frontend, while designing robust, scalable architectures on the backend. My goal is to build digital products that are not just functional, but genuinely "wow" the users.
+            I specialize in crafting high-performance web applications while leveraging Data Science to derive meaningful insights. My journey through internships at Parrophins and Internshala has solidified my expertise in modern JavaScript frameworks, and I am now deeply invested in building intelligent, data-driven systems that deliver exceptional user value.
           </p>
         </div>
       </div>

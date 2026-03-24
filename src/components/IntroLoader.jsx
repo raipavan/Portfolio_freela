@@ -6,23 +6,23 @@ const IntroLoader = ({ onComplete }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsAnimating(false);
-      setTimeout(onComplete, 800);
-    }, 1600); 
+      setTimeout(onComplete, 1000);
+    }, 3500); 
     
     return () => clearTimeout(timer);
   }, [onComplete]);
 
-  const text = "Hi, I'm Deeksha";
+  const text = "Hi, I'm Pavan rai";
   
   return (
     <div className={`intro-loader ${!isAnimating ? 'fade-out-loader' : ''}`}>
-      <div className="falling-text">
+      <div className="rolling-text">
         {text.split('').map((char, index) => (
           <span 
             key={index} 
-            className="falling-letter"
+            className="rolling-letter"
             style={{ 
-              animationDelay: `${index * 0.05}s`,
+              animationDelay: `${index * 0.1}s`,
               marginLeft: char === ' ' ? '1rem' : '0' 
             }}
           >
